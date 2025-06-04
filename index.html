@@ -5,56 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bausal</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, #111, #333);
-      color: white;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      margin: 0;
+      font-family: sans-serif;
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      max-width: 700px;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
       text-align: center;
     }
-    header {
-      font-size: 3rem;
-      font-weight: bold;
-      margin-bottom: 1.5rem;
+
+    .section {
+      margin: 3rem 0;
     }
-    p {
-      margin-bottom: 2rem;
-      max-width: 600px;
-    }
+
     .btn {
-      background-color: white;
-      color: black;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      cursor: pointer;
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #000;
+      color: #fff;
       text-decoration: none;
+      border-radius: 0.5rem;
       transition: background 0.3s ease;
     }
+
     .btn:hover {
-      background-color: #ccc;
+      background-color: #333;
     }
-    footer {
-      position: absolute;
-      bottom: 1rem;
-      font-size: 0.8rem;
-      opacity: 0.6;
+
+    audio {
+      width: 100%;
+      margin: 1rem 0;
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>Bausal</header>
-  <p>Proyecto musical independiente. Nueva música disponible ahora.</p>
-  <a href="https://open.spotify.com/artist/" target="_blank" class="btn">Escúchalo en Spotify</a>
-  <footer>&copy; 2025 Bausal</footer>
+  <div class="container">
+    <h1>bausal</h1>
+
+    <div class="section">
+      <h2>Último lanzamiento: “Adónde”</h2>
+      <p>Ya disponible en todas las plataformas. Escúchala aquí:</p>
+      <audio controls>
+        <source src="https://open.spotify.com/track/0Njng0YgC6TG9ScaK6LBX3?si=TEQovhFWSmeaI3c0yigFeg" type="audio/mpeg">
+        Tu navegador no soporta audio embebido. <a href="https://open.spotify.com/track/0Njng0YgC6TG9ScaK6LBX3?si=TEQovhFWSmeaI3c0yigFeg" target="_blank">Escúchala en Spotify</a>
+      </audio>
+      <a class="btn" href="https://open.spotify.com/track/0Njng0YgC6TG9ScaK6LBX3?si=TEQovhFWSmeaI3c0yigFeg" target="_blank">Spotify</a>
+      <a class="btn" href="#" target="_blank">Apple Music</a>
+      <a class="btn" href="#" target="_blank">YouTube Music</a>
+    </div>
+
+    <div class="section">
+      <h2>Merch</h2>
+      <p>Muy pronto disponibles CDs y camisetas exclusivas de bausal.</p>
+      <a class="btn" href="#">Comprar CDs</a>
+      <a class="btn" href="#">Comprar camisetas</a>
+    </div>
+  </div>
 </body>
 </html>
+
